@@ -42,3 +42,41 @@ Build a machine learning model to classify messages as Spam or Not Spam.
 
 Expose model via Flask API
 
+
+
+\## Day 2 Progress
+
+\- Built Flask API
+
+\- Created /predict endpoint
+
+\- Integrated ML model into API
+
+
+
+\## API Usage
+
+
+
+POST /predict
+
+
+
+Request:
+
+{
+
+&#x20; "text": "Win money"
+
+}
+
+
+
+Response:
+
+{
+
+&#x20; "prediction": "Spam"
+
+}
+
