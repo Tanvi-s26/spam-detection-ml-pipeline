@@ -80,3 +80,23 @@ Response:
 
 }
 
+
+
+\## Day 3 Progress
+
+\- Dockerized the Flask API
+
+\- Created Dockerfile
+
+\- Ran containerized application
+
+
+
+\## Run with Docker
+
+
+
+docker build -t spam-detection-app .
+
+docker run -p 5000:5000 spam-detection-app
+
