@@ -100,3 +100,13 @@ docker build -t spam-detection-app .
 
 docker run -p 5000:5000 spam-detection-app
 
+
+
+
+
+\## Day 4 Progress
+
+\- Deployed ML API to cloud
+
+\- Live endpoint available
+
