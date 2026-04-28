@@ -4,7 +4,7 @@ import pickle
 app = Flask(__name__)
 
 # Load trained model
-with open("model.pkl", "rb") as f:
+with open("app/model.pkl", "rb") as f:
     model, vectorizer = pickle.load(f)
 
 @app.route("/")
