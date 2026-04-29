@@ -1,112 +1,147 @@
-\# Spam Detection ML Pipeline
+🧠 Spam Detection ML Pipeline
 
 
 
-\## 📌 Problem Statement
-
-Build a machine learning model to classify messages as Spam or Not Spam.
+\---
 
 
 
-\## ⚙️ Day 1 Progress
-
-\- Created structured ML project
-
-\- Implemented text preprocessing using CountVectorizer
-
-\- Trained Naive Bayes model
-
-\- Saved model as pickle file for future deployment
+📌 Project Overview
 
 
 
-\## 🧠 Tech Stack
-
-\- Python
-
-\- scikit-learn
-
-\- pandas
+This project demonstrates an end-to-end Machine Learning pipeline where a spam detection model is:
 
 
 
-\## 📂 Project Structure
-
-\- model/ → training logic
-
-\- app/ → (API will be added later)
-
-
-
-\## 🚀 Next Step
-
-Expose model via Flask API
+* Trained using NLP techniques
+* Exposed via a REST API
+* Containerized using Docker
+* Deployed to the cloud
+* Tracked using MLflow
 
 
 
-\## Day 2 Progress
-
-\- Built Flask API
-
-\- Created /predict endpoint
-
-\- Integrated ML model into API
+\---
 
 
 
-\## API Usage
+🚀 Live Demo
 
 
 
-POST /predict
+👉 https://spam-detection-ml-pipeline.onrender.com/
 
 
 
-Request:
-
-{
-
-&#x20; "text": "Win money"
-
-}
+\---
 
 
 
-Response:
+🏗️ Architecture
 
-{
+User → API (Flask) → ML Model → Prediction → Response
 
-&#x20; "prediction": "Spam"
+&#x20;            ↓
 
-}
+&#x20;        Docker Container
 
+&#x20;            ↓
 
-
-\## Day 3 Progress
-
-\- Dockerized the Flask API
-
-\- Created Dockerfile
-
-\- Ran containerized application
+&#x20;        Cloud Deployment
 
 
 
-\## Run with Docker
+\---
 
 
+
+⚙️ Tech Stack
+
+
+
+* Python
+* scikit-learn
+* Flask
+* Docker
+* MLflow
+* Render (Deployment)
+
+
+
+\---
+
+
+
+📂 Project Structure
+
+
+
+spam-detection-ml-pipeline/
+
+│
+
+├── app/
+
+│   ├── app.py
+
+│   └── model.pkl
+
+│
+
+├── model/
+
+│   └── train.py
+
+│
+
+├── requirements.txt
+
+├── Dockerfile
+
+└── README.md
+
+
+
+\---
+
+
+
+🐳 Run with Docker
 
 docker build -t spam-detection-app .
 
 docker run -p 5000:5000 spam-detection-app
 
+📊 MLflow Tracking
 
 
 
+\---
 
-\## Day 4 Progress
 
-\- Deployed ML API to cloud
 
-\- Live endpoint available
+This project uses MLflow to:
+
+
+
+Track experiments
+
+Log parameters
+
+Store model artifacts
+
+
+
+\---
+
+
+
+🖼️ Screenshots
+
+!\[API Screenshot](screenshots/api.png)
+
+!\[logs](screenshots/logs.png)
+
+!\[MLflow](screenshots/mlflow.png)
 
