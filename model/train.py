@@ -3,6 +3,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 import pickle
 import os
+import mlflow
+import mlflow.sklearn
 
 # Ensure correct path for saving model
 os.makedirs("app", exist_ok=True)
@@ -26,10 +28,27 @@ df = pd.DataFrame(data)
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df["text"])
 
-# Step 3: Train Model
-model = MultinomialNB()
-model.fit(X, df["label"])
+# Step 3: 
 
+with mlflow.start_run():
+
+    vectorizer = CountVectorizer()
+    X = vectorizer.fit_transform(df["text"])
+
+    model = MultinomialNB()
+    model.fit(X, df["label"])
+
+    # Log model
+    mlflow.sklearn.log_model(model, "model")
+
+    # Log parameter
+    mlflow.log_param("model_type", "MultinomialNB")
+
+    # Save model locally also
+    with open("app/model.pkl", "wb") as f:
+        pickle.dump((model, vectorizer), f)
+
+    print("Model trained & logged with MLflow")
 # Step 4: Save Model
 with open("app/model.pkl", "wb") as f:
     pickle.dump((model, vectorizer), f)
