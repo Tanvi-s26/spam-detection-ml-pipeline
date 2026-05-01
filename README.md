@@ -137,11 +137,5 @@ Store model artifacts
 
 
 
-🖼️ Screenshots
-
-!\[API Screenshot](screenshots/api.png)
-
-!\[logs](screenshots/logs.png)
-
-!\[MLflow](screenshots/mlflow.png)
+!\[CI](https://github.com/Tanvi-s26/spam-detection-ml-pipeline/actions/workflows/ci-cd.yml/badge.svg)
 
